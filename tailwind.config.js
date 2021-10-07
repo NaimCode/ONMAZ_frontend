@@ -4,6 +4,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      boxShadow: {
+        "2xl-full": "0 0 20px 0 rgba(0, 0, 0, 0.25)",
+      },
       fontFamily: {
         logo: ["Corben", "cursive"],
         title: ["Gowun Batang", "serif"],

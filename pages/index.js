@@ -1,5 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
+import About from "../components/about";
+import Features from "../components/features";
 import Hero from "../components/hero";
 
 export default function Home() {
@@ -23,7 +25,8 @@ export default function Home() {
       </Head>
       <div>
         <Hero />
-        <div className="h-screen bg-yellow-50 w-full"></div>
+        <About />
+        <Features />
         <div className="h-screen bg-gray-400 w-full"></div>
       </div>
     </div>
