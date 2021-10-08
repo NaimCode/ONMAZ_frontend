@@ -10,12 +10,11 @@ const Contact = () => {
           marginwidth="0"
           title="map"
           scrolling="no"
-          src="https://maps.google.com/maps?width=100%&height=600&hl=en&q=%C4%B0zmir+(My%20Business%20Name)&ie=UTF8&t=&z=14&iwloc=B&output=embed"
-          style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+          src="https://www.google.com/maps?q=La%20Fontaine%20de%20l%E2%80%99Union%2C%20N'Djamena%2C%20Tchad&z=17&t=&ie=UTF8&output=embed"
         ></iframe>
       </div>
-      <div class="container px-5 py-24 mx-auto flex">
-        <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+      <div class=" container px-5 py-24 mx-auto flex">
+        <div class="lg:w-1/3 md:w-1/2 bg-white rounded-lg p-8 shadow-2xl flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 ">
           <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">
             Feedback
           </h2>
