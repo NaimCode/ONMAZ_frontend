@@ -3,7 +3,7 @@ const About = () => {
     <div className=" w-full flex justify-evenly items-center my-44">
       <img src="/logo_large.png" alt="" className="h-auto mt-[-80px]" />
       <div className="w-1/2 mb-[-40px]">
-        <h1 className="text-5xl font-body font-bold  text-black ">
+        <h1 className="sm:text-3xl text-2xl font-medium title-font  text-black ">
           A PROPOS DE NOUS
         </h1>
         <div className="opacity-40 text-lg  text-black mt-11 font-body">
@@ -11,19 +11,14 @@ const About = () => {
             Situé sur l'avenue Mobutu, non loin de rond-point Fontaine de
             l'Union en face de CFAO-Motors , l’Office Notarial de Maître Adamou
             Zouadaï rassemble six collaborateurs autour d'un notaire stagiaire.
-          </p>
-
-          <p className="my-2">
-            La fusion des compétences et spécialisations de notre équipe permet
-            de vous apporter une expertise reconnue tant pour les actes courants
-            que pour les opérations complexes dans le conseil patrimonial, le
-            droit de la famille que dans les domaines de l’immobilier, de
-            l’entreprise et des sociétés.
-          </p>
-          <p>
-            Toutes ces compétences nous permettent d’accompagner au plus près
-            les entreprises, les familles et toutes personnes à chaque étape
-            essentielle de la vie.
+            <br />
+            <br />
+            Être notaire, c’est conseiller et accompagner chaque client
+            consciencieusement. Cela se traduit par la rédaction d’actes
+            sur-mesure. Le travail en équipe avec les autres professionnels est
+            incontournable pour mener à bien le projet du client. En tant que
+            notaire, il est très important de respecter les normes en vigueur,
+            quelles que soient les missions confiées.
           </p>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import Appbar from "../components/appbar";
+import Footer from "../components/footer";
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -6,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <div className="relative">
       <Appbar />
       <Component {...pageProps} />
+      <Footer />
     </div>
   );
 }

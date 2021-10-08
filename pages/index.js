@@ -1,8 +1,10 @@
 import Head from "next/head";
 import Image from "next/image";
 import About from "../components/about";
+import Contact from "../components/contact";
 import Features from "../components/features";
 import Hero from "../components/hero";
+import Team from "../components/team";
 
 export default function Home() {
   return (
@@ -27,6 +29,8 @@ export default function Home() {
         <Hero />
         <About />
         <Features />
+        <Team />
+        <Contact />
         <div className="h-screen bg-white w-full"></div>
       </div>
     </div>
