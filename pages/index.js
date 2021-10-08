@@ -27,7 +27,7 @@ export default function Home() {
         <Hero />
         <About />
         <Features />
-        <div className="h-screen bg-gray-400 w-full"></div>
+        <div className="h-screen bg-white w-full"></div>
       </div>
     </div>
   );

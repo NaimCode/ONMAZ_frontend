@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       boxShadow: {
-        "2xl-full": "0 0 20px 0 rgba(0, 0, 0, 0.25)",
+        "2xl-full": "0 0 15px -3px rgba(0, 0, 0, 0.1)",
       },
       fontFamily: {
         logo: ["Corben", "cursive"],

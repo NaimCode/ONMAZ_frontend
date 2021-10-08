@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <div className=" w-full flex justify-evenly items-center mb-20 mt-24">
-      <img src="/logo_large.png" alt="" className="h-auto" />
-      <div className="w-1/2 ">
+    <div className=" w-full flex justify-evenly items-center my-44">
+      <img src="/logo_large.png" alt="" className="h-auto mt-[-80px]" />
+      <div className="w-1/2 mb-[-40px]">
         <h1 className="text-5xl font-body font-bold  text-black ">
           A PROPOS DE NOUS
         </h1>

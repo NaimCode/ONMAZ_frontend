@@ -1,6 +1,6 @@
 const Hero = () => {
   return (
-    <div className=" shadow-xl h-screen w-full bg-primary flex justify-evenly items-center mt-[-100px] transform skew-y-6 pt-20">
+    <div className=" shadow-md h-screen w-full bg-primary flex justify-evenly items-center mt-[-100px] transform skew-y-6 pt-20">
       <div className="w-1/3 transform -skew-y-6">
         <h1 className="text-5xl font-body font-bold text-white ">
           OFFICE NOTARIAL DE MAITRE ADAMOU ZOUADAI
