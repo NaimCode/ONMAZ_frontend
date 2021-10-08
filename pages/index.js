@@ -31,7 +31,6 @@ export default function Home() {
         <Features />
         <Team />
         <Contact />
-        <div className="h-screen bg-white w-full"></div>
       </div>
     </div>
   );
