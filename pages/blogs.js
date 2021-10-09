@@ -24,11 +24,11 @@ const Blogs = () => {
                     src="full_1.jpg"
                     alt="blog"
                   />
-                  <div class={`p-6 bg-primary`}>
-                    <h1 class="title-font text-lg font-medium text-white mb-3">
+                  <div class={`p-6 bg-yellow-400`}>
+                    <h1 class="title-font text-lg font-medium  mb-3">
                       The Catalyzer
                     </h1>
-                    <p class="leading-relaxed mb-3 text-white ">
+                    <p class="leading-relaxed mb-3  ">
                       Photo booth fam kinfolk cold-pressed sriracha leggings
                       jianbing microdosing tousled waistcoat.
                     </p>
@@ -43,4 +43,5 @@ const Blogs = () => {
   );
 };
 
+const AddBlogs = () => {};
 export default Blogs;
