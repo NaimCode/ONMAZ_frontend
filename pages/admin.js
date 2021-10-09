@@ -19,12 +19,12 @@ const Admin = () => {
 
           <div className="w-1/3  border-gray-300 pl-4 border-l-2 flex flex-col">
             <form action="">
-              <input type="file" name="file" accept="image/*" />
+              <input type="file" name="image" accept="image/*" />
 
               <input
                 type="text"
                 placeholder="Donner un titre"
-                name="titre"
+                name="title"
                 className="flex items-center h-12 px-4 w-full bg-gray-200 mt-2 rounded focus:outline-none focus:ring-2"
               />
               <textarea
