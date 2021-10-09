@@ -36,7 +36,7 @@ const Team = () => {
     <div className="">
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col md:max-w-3xl w-full mb-20">
+          <div class="flex flex-col md:max-w-3xl w-full mb-20  text-center md:text-left">
             <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               NOTRE EQUIPE
             </h1>
@@ -55,7 +55,10 @@ const Team = () => {
           </div>
           <div class="flex flex-wrap -m-2">
             {listTeammate.map((t) => (
-              <div key={listTeammate.indexOf(t)} class="p-3 lg:w-1/3 md:w-1/2 w-full transition duration-300 hover:scale-110">
+              <div
+                key={listTeammate.indexOf(t)}
+                class="p-3 lg:w-1/3 md:w-1/2 w-full transition duration-300 hover:scale-110"
+              >
                 <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
                   <img
                     alt="team"

@@ -1,12 +1,16 @@
 const About = () => {
   return (
-    <div className=" w-full flex justify-evenly items-center my-44">
-      <img src="/logo_large.png" alt="" className="h-auto mt-[-80px]" />
-      <div className="w-1/2 mb-[-40px]">
-        <h1 className="sm:text-3xl text-2xl font-medium title-font  text-black ">
+    <div className=" w-full flex flex-col md:flex-row justify-evenly items-center px-3 md:px-0 my-36 md:my-44">
+      <img
+        src="/logo_large.png"
+        alt=""
+        className="h-auto mx-auto md:-mt-24 md:mx-0"
+      />
+      <div className="w-full md:w-1/2 md:mb-[-40px]">
+        <h1 className="mt-7 md:mt-0 md:text-3xl text-2xl font-medium title-font  text-black text-center md:text-left">
           A PROPOS DE NOUS
         </h1>
-        <div className="opacity-40 text-lg  text-black mt-11 font-body">
+        <div className="opacity-40 text-lg  text-black mt-11 font-body text-center md:text-left">
           <p>
             Situé sur l'avenue Mobutu, non loin de rond-point Fontaine de
             l'Union en face de CFAO-Motors , l’Office Notarial de Maître Adamou
