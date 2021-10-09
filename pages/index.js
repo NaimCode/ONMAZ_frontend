@@ -11,6 +11,7 @@ export default function Home() {
     <div>
       <Head>
         <title>Bureau ONMAZ</title>
+
         <meta
           name="description"
           content="Notre meilleure garantie, c’est la satisfaction de nos clients avec un service professionnel et humain"
@@ -24,6 +25,7 @@ export default function Home() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
+        <meta name="theme-color" content="#56B2E7" />
       </Head>
       <div>
         <Hero />

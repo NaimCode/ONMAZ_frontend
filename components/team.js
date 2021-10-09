@@ -55,7 +55,7 @@ const Team = () => {
           </div>
           <div class="flex flex-wrap -m-2">
             {listTeammate.map((t) => (
-              <div class="p-3 lg:w-1/3 md:w-1/2 w-full transition duration-300 hover:scale-110">
+              <div key={listTeammate.indexOf(t)} class="p-3 lg:w-1/3 md:w-1/2 w-full transition duration-300 hover:scale-110">
                 <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
                   <img
                     alt="team"
