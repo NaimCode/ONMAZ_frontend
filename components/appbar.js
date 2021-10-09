@@ -21,7 +21,7 @@ const menu = [
   },
 ];
 const Appbar = () => {
-  const [menuMobile, setmenuMobile] = useState(true);
+  const [menuMobile, setmenuMobile] = useState(false);
   return (
     <div
       className={`fixed top-0 left-0 z-50 w-full backdrop-filter backdrop-blur-3xl bg-primary bg-opacity-60`}
@@ -70,14 +70,20 @@ const Appbar = () => {
         {menu.map((m) => (
           <div
             key={menu.indexOf(m)}
-            onClick={() => router.push(m.route)}
+            onClick={() => {
+              setmenuMobile(false);
+              router.push(m.route);
+            }}
             className="cursor-pointer filter  font-body text-3xl transition duration-300 text-white drop-shadow-lg hover:font-body hover:scale-110"
           >
             {m.titre}
           </div>
         ))}
         <div
-          onClick={() => router.push("/contact")}
+          onClick={() => {
+            setmenuMobile(false);
+            router.push("/contact");
+          }}
           className="mt-11 flex cursor-pointer px-2 py-1 rounded-lg font-title font-bold text-3xl bg-yellow-400 transition duration-300 hover:drop-shadow-xl hover:bg-yellow-500 "
         >
           Contactez-nous
