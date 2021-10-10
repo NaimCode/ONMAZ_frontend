@@ -1,8 +1,11 @@
 const list = [1, 2, 21, 1, 1, 1, 1, , 1, 1];
-const Blogs = () => {
+import { useEffect, useState } from "react";
+import axios from "axios";
+import { API_URL } from "../utils/env";
+const Blogs = ({ blogs }) => {
   return (
     <div>
-      <section class="text-gray-600 body-font">
+      <section class=" body-font">
         <div class="container px-5 py-24 mx-auto">
           <div className="w-full md:w-1/2 text-center mx-auto">
             <h1
@@ -15,33 +18,49 @@ const Blogs = () => {
               Dans cette page vous allez trouver toutes nos nouvelles
             </p>
           </div>
-          <div class="flex flex-wrap my-4 md:m-4">
-            {list.map((l) => (
-              <div class="group transition duration-300 hover:scale-105 overflow-hidden py-4 md:p-4 md:w-1/2">
-                <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                  <img
-                    class="h-[220px] lg:h-[400px] md:h-[300px] w-full object-cover transition duration-500 group-hover:scale-105 object-center"
-                    src="full_1.jpg"
-                    alt="blog"
-                  />
-                  <div class={`p-6 bg-yellow-400`}>
-                    <h1 class="title-font text-lg font-medium  mb-3">
-                      The Catalyzer
-                    </h1>
-                    <p class="leading-relaxed mb-3  ">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
-                    </p>
+          <section class="text-gray-600 body-font overflow-hidden">
+            <div class="container px-5 py-24 mx-auto">
+              <div class="-my-8 divide-y-2 divide-gray-100">
+                {blogs.map((b) => (
+                  <div class="py-8 flex flex-wrap md:flex-nowrap">
+                    <div class="md:w-64 md:mb-0 mb-6 flex-shrink-0 flex flex-col items-start">
+                      <span class="font-semibold title-font text-yellow-400 text-7xl">
+                        {new Date(b.createdAt).getDate()}
+                      </span>
+                      <span class="mt-1 text-gray-500 text-sm">
+                        {`${1 + new Date(b.createdAt).getMonth()} - ${new Date(
+                          b.createdAt
+                        ).getFullYear()}`}
+                      </span>
+                    </div>
+                    <div class="md:flex-grow">
+                      {b.image !== "" && (
+                        <img src={b.image} alt="" className="w-full md:w-3/4" />
+                      )}
+                      <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+                        {b.title}
+                      </h2>
+                      <p class="leading-relaxed">{b.description}</p>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
+            </div>
+          </section>
         </div>
       </section>
     </div>
   );
 };
 
-const AddBlogs = () => {};
+export async function getStaticProps(context) {
+  const res = await fetch(`${API_URL}/blogs`);
+  const data = await res.json();
+  console.log(data);
+  return {
+    props: {
+      blogs: data.reverse(),
+    }, // will be passed to the page component as props
+  };
+}
 export default Blogs;
