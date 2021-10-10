@@ -2,6 +2,7 @@ const list = [1, 2, 21, 1, 1, 1, 1, , 1, 1];
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../utils/env";
+import { monthNumToString } from "../functions/converting";
 const Blogs = ({ blogs }) => {
   return (
     <div>
@@ -27,17 +28,17 @@ const Blogs = ({ blogs }) => {
                       <span class="font-semibold title-font text-yellow-400 text-7xl">
                         {new Date(b.createdAt).getDate()}
                       </span>
-                      <span class="mt-1 text-gray-500 text-sm">
-                        {`${1 + new Date(b.createdAt).getMonth()} - ${new Date(
-                          b.createdAt
-                        ).getFullYear()}`}
+                      <span class="mt-1 text-gray-500 text-lg">
+                        {`${monthNumToString(
+                          1 + new Date(b.createdAt).getMonth()
+                        )}  ${new Date(b.createdAt).getFullYear()}`}
                       </span>
                     </div>
                     <div class="md:flex-grow">
                       {b.image !== "" && (
                         <img src={b.image} alt="" className="w-full md:w-3/4" />
                       )}
-                      <h2 class="text-2xl font-medium text-gray-900 title-font mb-2">
+                      <h2 class="text-2xl font-medium text-gray-900 py-5 title-font mb-2">
                         {b.title}
                       </h2>
                       <p class="leading-relaxed">{b.description}</p>
