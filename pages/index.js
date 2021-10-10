@@ -3,6 +3,7 @@ import Image from "next/image";
 import About from "../components/about";
 import Contact from "../components/contact";
 import Features from "../components/features";
+import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Team from "../components/team";
 
@@ -34,6 +35,7 @@ export default function Home() {
         <Team />
         <Contact />
       </div>
+      <Footer />
     </div>
   );
 }

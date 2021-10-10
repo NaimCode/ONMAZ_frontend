@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../utils/env";
 import { monthNumToString } from "../functions/converting";
+import Footer from "../components/footer";
 const Blogs = ({ blogs }) => {
   return (
     <div>
@@ -50,6 +51,7 @@ const Blogs = ({ blogs }) => {
           </section>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
