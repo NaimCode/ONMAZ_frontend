@@ -53,6 +53,48 @@ const Team = () => {
               essentielle de la vie.
             </p>
           </div>
+
+          <div class="py-11 flex flex-col sm:flex-row">
+            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+              <div class=" rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
+                <img
+                  src="maitre.jpg"
+                  alt=""
+                  className="w-48 h-48 rounded-full shadow-lg"
+                />
+              </div>
+              <div class="flex flex-col items-center text-center justify-center">
+                <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">
+                  Maître Adamou Zouadaï
+                </h2>
+                <div class="w-12 h-1 bg-indigo-500 rounded mt-2 mb-4"></div>
+                <p class="text-base max-w-[200px]">
+                  Notaire au ressort de la Cour d'appel de N'Djaména
+                </p>
+              </div>
+            </div>
+            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left flex flex-col justify-center">
+              <h2 className="text-xl text-black mb-3">
+                Comment et quand est venue l’idée de créer un site internet ?
+              </h2>
+              <p class="leading-relaxed mb-4">
+                "Par curiosité au départ ! Je me suis dit qu’un notaire devait
+                communiquer et qu’il fallait qu’il sorte « de sa zone de confort
+                » pour se faire connaître ou pour entretenir un réseau de
+                relations. Plus précisément, je me suis dit qu’il fallait
+                profiter de ce formidable outil qui est l'internet, afin de
+                permettre aux gens, notamment les tchadiens en particulier, de
+                s'imprégner de ce domaine qui reste aujourd'hui moins connu et
+                très complexe.
+                <br />
+                <br /> Et à cette occasion, je me suis rendu compte qu’il
+                fallait créé un environnement d’informations juridiques afin que
+                les visiteurs sachent à quel point ce domaine d'activité reste
+                toutefois intéressant.
+              </p>
+            </div>
+          </div>
+
           <div class="flex flex-wrap -m-2">
             {listTeammate.map((t) => (
               <div
