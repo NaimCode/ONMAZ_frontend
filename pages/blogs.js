@@ -1,4 +1,3 @@
-const list = [1, 2, 21, 1, 1, 1, 1, , 1, 1];
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { API_URL } from "../utils/env";
@@ -59,7 +58,7 @@ const Blogs = ({ blogs }) => {
 export async function getStaticProps(context) {
   const res = await fetch(`${API_URL}/blogs`);
   const data = await res.json();
-  console.log(data);
+
   return {
     props: {
       blogs: data.reverse(),

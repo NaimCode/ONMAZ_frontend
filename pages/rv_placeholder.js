@@ -1,25 +1,37 @@
 import { API_URL } from "../utils/env";
 import { useState } from "react";
-const PrendreRendez_vous = () => {
-  const [date, setdate] = useState();
-  const [nom, setnom] = useState();
-  const [tel, settel] = useState();
-  const [email, setemail] = useState();
-  const [message, setmessage] = useState();
+import axios from "axios";
+const RV = () => {
+  const [date, setdate] = useState("");
+  const [nom, setnom] = useState("");
+  const [tel, settel] = useState("");
+  const [email, setemail] = useState("");
+  const [message, setmessage] = useState("");
 
-  const handleSubmit = (event) => {};
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData();
+    formData.append("date", date);
+    formData.append("nom", nom);
+    formData.append("email", email);
+    formData.append("tel", tel);
+    formData.append("text", message);
+    console.log(event.target.value);
+    console.log(message);
+    console.log(formData);
+    axios.post(`${API_URL}/rendez-vous`, formData);
+  };
 
   return (
     <div className="h-screen px-3 flex items-center justify-center">
-      <div className="container mx-auto">
+      <form method="post" action={`${API_URL}/rv`}>
+        <input type="text" name="text" className="border-2 " />
+        <button type="submit">Submit</button>
+      </form>
+      {/* <div className="container mx-auto">
         <form
-          action="#"
           //{`${API_URL}/rendez-vous`}
-          onSubmit={(event) => {
-            event.preventDefault();
-            console.log(event.target.value);
-          }}
-          method="POST"
+          onSubmit={handleSubmit}
           class="form bg-white p-6 my-10 relative"
         >
           <div
@@ -40,6 +52,7 @@ const PrendreRendez_vous = () => {
           <input
             required
             type="date"
+            onChange={(event) => setdate(event.target.value)}
             required
             name="date"
             placeholder="Date"
@@ -50,6 +63,7 @@ const PrendreRendez_vous = () => {
             <input
               required
               type="text"
+              onChange={(event) => setnom(event.target.value)}
               name="nom"
               placeholder="Nom"
               class="border p-2  w-1/2"
@@ -58,6 +72,7 @@ const PrendreRendez_vous = () => {
               required
               type="tel"
               name="tel"
+              onChange={(event) => settel(event.target.value)}
               placeholder="Tel"
               class="border p-2 w-1/2"
             />
@@ -67,26 +82,29 @@ const PrendreRendez_vous = () => {
             resource
             type="email"
             name="email"
+            onChange={(event) => setemail(event.target.value)}
             placeholder="Email"
             class="border p-2 w-full mt-3"
           />
           <textarea
             name="text"
+            onChange={(event) => setmessage(event.target.value)}
             cols="10"
             rows="7"
             placeholder="Message (optionnel)"
-            class="border p-2 mt-3 w-full"
-          ></textarea>
-
-          <input
-            type="submit"
-            value="Soumettre"
-            class="cursor-pointer w-full mt-6 bg-yellow-400 hover:bg-yellow-300  font-semibold p-3"
+            className="border p-2 mt-3 w-full"
           />
+
+          <button
+            type="submit"
+            class=" w-full mt-6 bg-yellow-400 hover:bg-yellow-300  font-semibold p-3"
+          >
+            Soumettre
+          </button>
         </form>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default PrendreRendez_vous;
+export default RV;

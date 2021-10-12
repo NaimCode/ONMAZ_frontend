@@ -13,7 +13,7 @@ const menu = [
   },
   {
     titre: "Prendre rendez-vous",
-    route: "/rendez-vous",
+    route: "/rv",
   },
   {
     titre: "Equipe",
