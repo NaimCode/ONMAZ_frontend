@@ -1,21 +1,39 @@
-const Contact = () => {
+const ContactSection = ({ setcontact, contact }) => {
   return (
-    <section className="text-gray-600 body-font relative">
-      <div className="absolute inset-0 bg-gray-300">
-        <iframe
-          width="100%"
-          height="100%"
-          frameborder="0"
-          marginheight="0"
-          marginwidth="0"
-          title="map"
-          scrolling="no"
-          src="https://www.google.com/maps?q=La%20Fontaine%20de%20l%E2%80%99Union%2C%20N'Djamena%2C%20Tchad&z=17&t=&ie=UTF8&output=embed"
-        ></iframe>
+    <div
+      onClick={() => setcontact(false)}
+      className="z-50 fixed top-0 left-0 h-screen w-screen bg-black bg-opacity-40 flex items-center justify-center "
+    >
+      <div className="max-w-lg  shadow-2xl rounded-xl overflow-hidden mx-4">
+        <img src="contact.svg" alt="" className="w-full bg-white" />
+        <div className="flex flex-row gap-6 justify-evenly items-center bg-white my-3 p-2">
+          <h2 className="text-xl text-center font-logo text-primary w-1/2">
+            Notaire{" "}
+          </h2>
+          <div className="opacity-70 italic flex flex-col w-1/2">
+            <span className="opacity-30">Whatsapp</span>
+            <span>00212700480681</span>
+
+            <span className="opacity-30">Email</span>
+            <span>naimdev4@gmail.com</span>
+          </div>
+        </div>
+
+        <div className="flex flex-row gap-6 justify-evenly items-center bg-white p-2">
+          <h2 className="text-xl font-logo text-primary text-center w-1/2">
+            Programmeur
+          </h2>
+          <div className="opacity-70 italic flex flex-col w-1/2">
+            <span className="opacity-30">Whatsapp</span>
+            <span>00212700480681</span>
+
+            <span className="opacity-30">Email</span>
+            <span>naimdev4@gmail.com</span>
+          </div>
+        </div>
       </div>
-      <div class=" container px-5 h-[60vh] mx-auto flex"></div>
-    </section>
+    </div>
   );
 };
 
-export default Contact;
+export default ContactSection;

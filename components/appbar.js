@@ -15,20 +15,19 @@ const menu = [
     titre: "Prendre rendez-vous",
     route: "/rv",
   },
-  {
-    titre: "Equipe",
-    route: "/equipe",
-  },
 ];
-const Appbar = () => {
+const Appbar = ({ setcontact, contact }) => {
   const [menuMobile, setmenuMobile] = useState(false);
   return (
     <div
       className={`fixed top-0 left-0 z-50 w-full backdrop-filter backdrop-blur-3xl bg-primary bg-opacity-60`}
     >
       <div className="container mx-auto px-4 md:px-3 py-1 h-16 flex justify-between items-center">
-        <span className="filter flex items-end font-bold font-body text-2xl text-white drop-shadow-xl">
-          <GoLaw className="text-4xl drop-shadow-2xl mr-1 text-yellow-400 " />
+        <span
+          onClick={() => router.push("/")}
+          className="cursor-pointer filter flex items-end font-bold font-body text-2xl text-white drop-shadow-xl"
+        >
+          <GoLaw className="transition-colors duration-300 text-4xl drop-shadow-2xl mr-1 text-yellow-400 hover:text-gray-500 " />
           ONMAZ
         </span>
         <div
@@ -56,7 +55,7 @@ const Appbar = () => {
           ))}
         </div>
         <div
-          onClick={() => router.push("/contact")}
+          onClick={() => setcontact(!contact)}
           className=" hidden md:flex cursor-pointer px-2 py-1 rounded-lg font-title font-bold text-lg bg-yellow-400 transition duration-300 hover:drop-shadow-xl hover:bg-yellow-500 "
         >
           Contactez-nous
@@ -80,10 +79,7 @@ const Appbar = () => {
           </div>
         ))}
         <div
-          onClick={() => {
-            setmenuMobile(false);
-            router.push("/contact");
-          }}
+          onClick={() => setcontact(!contact)}
           className="mt-11 flex cursor-pointer px-2 py-1 rounded-lg font-title font-bold text-3xl bg-yellow-400 transition duration-300 hover:drop-shadow-xl hover:bg-yellow-500 "
         >
           Contactez-nous
