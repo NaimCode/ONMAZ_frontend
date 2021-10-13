@@ -1,28 +1,28 @@
 import { useInView } from "react-intersection-observer";
 
 const About = () => {
-  const { refRight, inViewRight, entryRight } = useInView({
+  const [refRight, inViewRight, entryRight] = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: 0.2,
   });
-  const { refLeft, inViewLeft, entryLeft } = useInView({
+  const [refLeft, inViewLeft, entryLeft] = useInView({
     /* Optional options */
-    threshold: 1,
+    threshold: 0.2,
   });
   return (
-    <div className=" w-full flex flex-col md:flex-row justify-evenly items-center px-3 md:px-0 my-36 md:my-44">
+    <div className=" w-full flex flex-col md:flex-row justify-evenly items-center px-3 md:px-0 my-10 md:my-44">
       <img
         ref={refLeft}
         src="/logo_large.png"
         alt=""
         className={`${
-          !inViewLeft ? "animate-leftOp1 opacity-100" : ""
-        } h-auto mx-auto md:-mt-24 md:mx-0 opacity-0`}
+          inViewLeft ? "animate-leftOp1 " : "opacity-0"
+        } h-auto mx-auto md:-mt-24 md:mx-0 `}
       />
       <div
-        ref={refLeft}
+        ref={refRight}
         className={`${
-          !inViewRight ? "animate-rightOp2" : "opacity-0"
+          inViewRight ? "animate-rightOp1 md:animate-rightOp2" : "opacity-0"
         } w-full md:w-1/2 md:mb-[-40px]`}
       >
         <h1 className="mt-7 md:mt-0 md:text-3xl text-2xl font-medium title-font  text-black text-center md:text-left">

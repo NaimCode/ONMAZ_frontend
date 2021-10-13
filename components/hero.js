@@ -1,11 +1,12 @@
 import { useInView } from "react-intersection-observer";
-
+import React from "react";
 const Hero = () => {
-  const { refRight, inViewRight, entryRight } = useInView({
+  const { refRight, inViewRight } = useInView({
     /* Optional options */
     threshold: 0,
   });
-  const { refLeft, inViewLeft, entryLeft } = useInView({
+  const { refLeft, inViewLeft } = useInView({
+    delay: 100,
     /* Optional options */
     threshold: 0,
   });

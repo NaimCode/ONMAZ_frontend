@@ -40,7 +40,7 @@ module.exports = {
         leftOp1: {
           from: {
             opacity: "0",
-            transform: "translateY(-40px)",
+            transform: "translateX(-40px)",
           },
 
           to: {
@@ -51,7 +51,7 @@ module.exports = {
         leftOp2: {
           from: {
             opacity: "0",
-            transform: "translateY(40px)",
+            transform: "translateX(40px)",
           },
           "20%": {
             opacity: "0",
@@ -66,7 +66,7 @@ module.exports = {
         rightOp2: {
           from: {
             opacity: "0",
-            transform: "translateY(40px)",
+            transform: "translateX(40px)",
           },
           "20%": {
             opacity: "0",
@@ -81,7 +81,7 @@ module.exports = {
         rightOp1: {
           from: {
             opacity: "0",
-            transform: "translateY(40px)",
+            transform: "translateX(40px)",
           },
 
           to: {
