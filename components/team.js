@@ -1,3 +1,4 @@
+import { useInView } from "react-intersection-observer";
 import TouchCarousel from "react-touch-carousel";
 const listTeammate = [
   {
@@ -32,15 +33,32 @@ const listTeammate = [
   },
 ];
 const Team = () => {
+  const [refRight, inViewRight, entryRight] = useInView({
+    /* Optional options */
+    threshold: 0.2,
+  });
+  const [refLeft, inViewLeft, entryLeft] = useInView({
+    /* Optional options */
+    threshold: 0.2,
+  });
+  const [refBot, inViewBot, entryBot] = useInView({
+    /* Optional options */
+    threshold: 0.2,
+  });
   return (
     <div className="">
       <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-col md:max-w-3xl w-full mb-20  text-center md:text-left">
-            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
+          <div
+            ref={refLeft}
+            className={`${
+              inViewLeft ? "animate-leftOp1" : "opacity-0"
+            } flex flex-col md:max-w-3xl w-full mb-20  text-center md:text-left`}
+          >
+            <h1 class=" sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">
               NOTRE EQUIPE
             </h1>
-            <p className="text-lg opacity-75  mt-11 font-body">
+            <p ref={refLeft} class={`text-lg opacity-75  mt-11 font-body`}>
               La fusion des compétences et spécialisations de notre équipe
               permet de vous apporter une expertise reconnue tant pour les actes
               courants que pour les opérations complexes dans le conseil
@@ -54,8 +72,13 @@ const Team = () => {
             </p>
           </div>
 
-          <div class="py-11 flex flex-col sm:flex-row">
-            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+          <div class="py-4 md:py-11 flex flex-col sm:flex-row">
+            <div
+              ref={refRight}
+              class={`${
+                inViewRight ? "animate-rightOp1" : "opacity-0"
+              } sm:w-1/3 text-center sm:pr-8 sm:py-8`}
+            >
               <div class=" rounded-full inline-flex items-center justify-center bg-gray-200 text-gray-400">
                 <img
                   src="maitre.jpg"
@@ -63,7 +86,7 @@ const Team = () => {
                   className="w-48 h-48 rounded-full shadow-lg"
                 />
               </div>
-              <div class="flex flex-col items-center text-center justify-center">
+              <div className="flex flex-col items-center text-center justify-center">
                 <h2 class="font-medium title-font mt-4 text-gray-900 text-lg">
                   Maître Adamou Zouadaï
                 </h2>
@@ -73,7 +96,12 @@ const Team = () => {
                 </p>
               </div>
             </div>
-            <div class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left flex flex-col justify-center">
+            <div
+              ref={refRight}
+              className={`${
+                inViewRight ? "animate-rightOp2" : "opacity-0"
+              } sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left flex flex-col justify-center`}
+            >
               <h2 className="text-xl text-black mb-3">
                 Comment et quand est venue l’idée de créer un site internet ?
               </h2>
@@ -95,7 +123,12 @@ const Team = () => {
             </div>
           </div>
 
-          <div class="flex flex-wrap -m-2">
+          <div
+            ref={refBot}
+            class={`${
+              inViewBot ? "animate-bottomOp2" : "opacity-0"
+            } flex flex-wrap -m-2`}
+          >
             {listTeammate.map((t) => (
               <div
                 key={listTeammate.indexOf(t)}

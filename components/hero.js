@@ -1,11 +1,11 @@
 import { useInView } from "react-intersection-observer";
 import React from "react";
 const Hero = () => {
-  const { refRight, inViewRight } = useInView({
+  const [refRight, inViewRight] = useInView({
     /* Optional options */
     threshold: 0,
   });
-  const { refLeft, inViewLeft } = useInView({
+  const [refLeft, inViewLeft] = useInView({
     delay: 100,
     /* Optional options */
     threshold: 0,
@@ -17,7 +17,7 @@ const Hero = () => {
         <span
           ref={refLeft}
           className={`${
-            !inViewLeft ? "animate-bottomOp2" : "opacity-0"
+            inViewLeft ? "animate-bottomOp2" : "opacity-0"
           } text-2xl md:text-5xl font-body font-bold text-white text-center md:text-left
         `}
         >
@@ -26,7 +26,7 @@ const Hero = () => {
         <p
           ref={refLeft}
           className={`${
-            !inViewLeft ? "animate-bottomOp2" : "opacity-0"
+            inViewLeft ? "animate-bottomOp2" : "opacity-0"
           } opacity-75 text-white mt-11 font-body text-center md:text-left`}
         >
           Nous contribuons à la réalisation de la plupart de vos projets en vous
@@ -41,7 +41,7 @@ const Hero = () => {
           src="/hero_blue.jpg"
           alt=""
           className={`${
-            !inViewRight ? "animate-bottomOp1" : "opacity-0"
+            inViewRight ? "animate-bottomOp1" : "opacity-0"
           } object-contain w-full `}
         />
       </div>
