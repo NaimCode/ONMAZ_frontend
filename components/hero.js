@@ -17,7 +17,7 @@ const Hero = () => {
         <span
           ref={refLeft}
           className={`${
-            inViewLeft ? "animate-bottomOp2" : "opacity-0"
+            inViewLeft && "animate-bottomOp2"
           } text-2xl md:text-5xl font-body font-bold text-white text-center md:text-left
         `}
         >
@@ -26,7 +26,7 @@ const Hero = () => {
         <p
           ref={refLeft}
           className={`${
-            inViewLeft ? "animate-bottomOp2" : "opacity-0"
+            inViewLeft && "animate-bottomOp2"
           } opacity-75 text-white mt-11 font-body text-center md:text-left`}
         >
           Nous contribuons à la réalisation de la plupart de vos projets en vous
@@ -41,7 +41,7 @@ const Hero = () => {
           src="/hero_blue.jpg"
           alt=""
           className={`${
-            inViewRight ? "animate-bottomOp1" : "opacity-0"
+            inViewRight && "animate-bottomOp1"
           } object-contain w-full `}
         />
       </div>
