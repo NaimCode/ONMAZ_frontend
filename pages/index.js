@@ -6,11 +6,16 @@ import Features from "../components/features";
 import Footer from "../components/footer";
 import Hero from "../components/hero";
 import Team from "../components/team";
-
+import { useInView, InView } from "react-intersection-observer";
 export default function Home() {
+  const { ref, inView, entry } = useInView({
+    /* Optional options */
+    threshold: 0,
+  });
+
   return (
     <div>
-      <Head>
+      <Head>  
         <title>Bureau ONMAZ</title>
 
         <meta
@@ -33,6 +38,7 @@ export default function Home() {
         <About />
         <Features />
         <Team />
+
         <Contact />
       </div>
       <Footer />
