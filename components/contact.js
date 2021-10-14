@@ -11,7 +11,7 @@ const ContactSection = ({ setcontact }) => {
       >
         <img src="contact.svg" alt="" className="w-full bg-white  " />
         <div className="flex flex-row gap-1 md:gap-6 justify-evenly items-center bg-white my-3 p-2 shadow-2xl ">
-          <h2 className="text-base md:text-xl text-center font-logo text-primary w-1/2 ">
+          <h2 className="text-base md:text-xl text-center font-logo text-primary px-4 ">
             Notaire
           </h2>
           <div className="opacity-70 italic flex flex-col w-1/2">
@@ -24,10 +24,10 @@ const ContactSection = ({ setcontact }) => {
         </div>
 
         <div className="flex flex-row gap-1 md:gap-6 justify-evenly items-center bg-white p-2 shadow-2xl ">
-          <h2 className="text-base md:text-xl font-logo text-primary text-center w-1/2">
+          <h2 className="text-base md:text-xl font-logo text-primary text-center px-4">
             Programmeur
           </h2>
-          <div className="opacity-70 italic flex flex-col w-1/2">
+          <div className="opacity-70 italic flex flex-col flex-grow">
             <span className="opacity-30">Appel/Whatsapp</span>
             <span>00212700480681</span>
 
