@@ -4,7 +4,7 @@ import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <div className="relative">
+    <div className="relative overflow-x-hidden">
       <Appbar />
 
       <Component {...pageProps} />
