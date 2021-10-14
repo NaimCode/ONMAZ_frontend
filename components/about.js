@@ -16,13 +16,13 @@ const About = () => {
         src="/logo_large.png"
         alt=""
         className={`${
-          inViewLeft && "animate-leftOp1 "
+          inViewLeft ? "animate-leftOp1 " : "opacity-0"
         } h-auto mx-auto md:-mt-24 md:mx-0 `}
       />
       <div
         ref={refRight}
         className={`${
-          inViewRight && "animate-rightOp1 md:animate-rightOp2"
+          inViewRight ? "animate-rightOp1 md:animate-rightOp2" : "opacity-0"
         } w-full md:w-1/2 md:mb-[-40px]`}
       >
         <h1 className="mt-7 md:mt-0 md:text-3xl text-2xl font-medium title-font  text-black text-center md:text-left">

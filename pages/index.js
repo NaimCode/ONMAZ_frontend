@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div>
-      <Head>  
+      <Head>
         <title>Bureau ONMAZ</title>
 
         <meta
