@@ -50,18 +50,18 @@ const RV = () => {
             Prendre un rendez-vous
           </h3>
           <p class="text-gray-600 mb-3">
-            {" "}
             Veuillez completer les champs suivant et soumettre le formulaire
           </p>
           <hr className="w-full h-1 my-4 flex justify-center items-center" />
-          <label className="opacity-50">Choisir votre date</label>
+
           <input
             type="file"
             onChange={(event) => setfile(event.target.value)}
-            name="image"
+            name="date"
             placeholder="Date"
             class="border p-2  w-full hidden"
           />
+          <label className="opacity-50 pr-5">Choisir votre date</label>
           <input
             type="date"
             onChange={(event) => setdate(event.target.value)}
