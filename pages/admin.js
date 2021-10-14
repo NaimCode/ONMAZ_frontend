@@ -82,13 +82,6 @@ const Admin = () => {
                     <DeleteIcon className=" text-white text-2xl text-center" />
                     supprimer
                   </div>
-                  <div
-                    onClick={() => {}}
-                    className="cursor-pointer bg-primary flex items-center gap-1 text-white px-3 py-1 rounded-md "
-                  >
-                    <EditIcon className=" text-white text-2xl text-center" />
-                    modifier
-                  </div>
                 </div>
               </div>
             ))}

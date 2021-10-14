@@ -20,7 +20,7 @@ const Hero = () => {
           } text-2xl md:text-5xl font-body font-bold text-white text-center md:text-left
         `}
         >
-          OFFICE NOTARIAL DE MAITRE ADAMOU ZOUADAI
+          OFFICE NOTARIAL DE MAÎTRE ADAMOU ZOUADAÏ
         </span>
         <p
           ref={refLeft}
