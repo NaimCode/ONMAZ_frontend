@@ -16,7 +16,7 @@ const ContactSection = ({ setcontact }) => {
           </h2>
           <div className="opacity-70 italic flex flex-col w-1/2">
             <span className="opacity-30">Appel/Whatsapp</span>
-            <span>00212700480681</span>
+            <span>+23566243460</span>
 
             <span className="opacity-30">Email</span>
             <span>adamounotaire@gmail.com</span>
@@ -29,7 +29,7 @@ const ContactSection = ({ setcontact }) => {
           </h2>
           <div className="opacity-70 italic flex flex-col flex-grow">
             <span className="opacity-30">Appel/Whatsapp</span>
-            <span>00212700480681</span>
+            <span>+212700480681</span>
 
             <span className="opacity-30">Email</span>
             <span>naimdev4@gmail.com</span>

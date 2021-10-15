@@ -63,7 +63,7 @@ const Features = () => {
           inViewRight ? "animate-rightOp2" : "opacity-0"
         } mt-8 md:mt-0 w-full md:w-1/2 transform -skew-y-6 flex items-center justify-center gap-5 md:gap-9`}
       >
-        <div className="w-1/2 gap-5 md:gap-9 flex flex-col mb-7">
+        <div className="w-1/2 gap-5 md:gap-9 flex flex-col ">
           {listFeatures.slice(0, 2).map((f) => (
             <div
               key={listFeatures.indexOf(f)}
@@ -74,7 +74,7 @@ const Features = () => {
             </div>
           ))}
         </div>
-        <div className="w-1/2 gap-5 md:gap-9 flex flex-col  md:mt-7">
+        <div className="w-1/2 gap-5 md:gap-9 flex flex-col  ">
           {listFeatures.slice(2, 4).map((f) => (
             <div
               key={listFeatures.indexOf(f)}
