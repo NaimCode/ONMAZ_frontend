@@ -32,7 +32,7 @@ const About = () => {
           <p>
             Situé sur l'avenue Mobutu, non loin de rond-point Fontaine de
             l'Union en face de CFAO-Motors , l’Office Notarial de Maître Adamou
-            Zouadaï rassemble six collaborateurs autour d'un notaire stagiaire.
+            Zouadaï rassemble six collaborateurs autour d'un notaire titulaire.
             <br />
             <br />
             Être notaire, c’est conseiller et accompagner chaque client
